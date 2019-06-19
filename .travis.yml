@@ -6,7 +6,8 @@ cache:
     - ~/.npm
 stages:
   - test
-  - release
+  - name: release
+    if: branch = master
 jobs:
   include:
     - stage: test
@@ -28,7 +29,5 @@ jobs:
         provider: script
         skip_cleanup: true
         script: npx semantic-release
-        on:
-          branch: master
 notifications:
   email: false

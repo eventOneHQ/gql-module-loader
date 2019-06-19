@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "npm run lint && npm run audit-report && npm audit",
+    "test": "npm run lint && npm run audit-report && npm audit || true",
     "lint": "eslint lib/ -f node_modules/eslint-html-reporter/reporter.js -o out/eslint.html || true && eslint lib/",
     "lint:fix": "eslint lib/ --fix",
     "lint!": "npm run format && npm run lint:fix",
