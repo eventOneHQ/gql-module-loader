@@ -1,0 +1,59 @@
+{
+  "name": "gql-module-loader",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run lint && npm run audit-report && npm audit",
+    "lint": "eslint lib/ -f node_modules/eslint-html-reporter/reporter.js -o out/eslint.html || true && eslint lib/",
+    "lint:fix": "eslint lib/ --fix",
+    "lint!": "npm run format && npm run lint:fix",
+    "format": "prettier --write lib/",
+    "audit-report": "npm audit --json | npm-audit-html -o tests/npm-audit.html",
+    "cm": "git-cz",
+    "pre-commit": "lint-staged",
+    "semantic-release": "semantic-release",
+    "docs": "jsdoc lib/ README.md"
+  },
+  "keywords": [
+    "graphql",
+    "module",
+    "loader",
+    "modules"
+  ],
+  "author": "eventOne Labs <opensource@event1.io>",
+  "repository": "eventOneHQ/gql-module-loader",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-html-reporter": "^0.7.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.4.1",
+    "jsdoc": "^3.6.2",
+    "lint-staged": "^8.2.1",
+    "npm-audit-html": "^1.3.2",
+    "prettier": "^1.13.5",
+    "semantic-release": "^15.5.2",
+    "travis-deploy-once": "^5.0.0"
+  },
+  "dependencies": {
+    "graphql-tools": "^4.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint!",
+      "git add"
+    ]
+  }
+}
