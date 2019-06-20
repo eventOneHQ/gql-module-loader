@@ -42,7 +42,9 @@
     "semantic-release": "^15.13.16",
     "travis-deploy-once": "^5.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
