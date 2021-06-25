@@ -11,9 +11,9 @@
     "format": "prettier --write lib/",
     "audit-report": "npm audit --json | npm-audit-html -o tests/npm-audit.html",
     "cm": "git-cz",
-    "pre-commit": "lint-staged",
     "semantic-release": "semantic-release",
-    "docs": "jsdoc lib/ README.md"
+    "docs": "jsdoc lib/ README.md",
+    "prepare": "husky install"
   },
   "keywords": [
     "graphql",
@@ -25,25 +25,25 @@
   "repository": "eventOneHQ/gql-module-loader",
   "license": "MIT",
   "devDependencies": {
-    "commitizen": "^4.2.1",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.9.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^16.0.3",
     "eslint-html-reporter": "^0.7.4",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "husky": "^4.3.0",
-    "jsdoc": "^3.6.5",
-    "lint-staged": "^10.4.0",
-    "npm-audit-html": "^1.4.3",
-    "prettier": "^2.1.2",
-    "semantic-release": "^17.1.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^6.0.0",
+    "jsdoc": "^3.6.7",
+    "lint-staged": "^11.0.0",
+    "npm-audit-html": "^1.5.0",
+    "prettier": "^2.3.1",
+    "semantic-release": "^17.4.4",
     "travis-deploy-once": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "config": {
     "commitizen": {
