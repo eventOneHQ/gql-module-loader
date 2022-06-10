@@ -39,7 +39,7 @@
     "lint-staged": "^11.0.0",
     "npm-audit-html": "^1.5.0",
     "prettier": "^2.3.1",
-    "semantic-release": "^17.4.4"
+    "semantic-release": "^19.0.3"
   },
   "dependencies": {
     "lodash": "^4.17.21"
